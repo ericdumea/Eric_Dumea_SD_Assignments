@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="286.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.UDPlayer">
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+    <children>
+        <TextField fx:id="emailTF" layoutX="77.0" layoutY="82.0" promptText="Email" />
+        <TextField fx:id="nameTF" layoutX="77.0" layoutY="188.0" promptText="Name" />
+        <Button fx:id="btnUpd" layoutX="154.0" layoutY="225.0" mnemonicParsing="false" onAction="#updUser" prefHeight="50.0" prefWidth="72.0" text="Update">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <PasswordField fx:id="passTF" layoutX="77.0" layoutY="118.0" promptText="Password" />
+        <PasswordField fx:id="confirmTF" layoutX="77.0" layoutY="152.0" promptText="Confirm Password" />
+      <Button fx:id="btnDel" layoutX="77.0" layoutY="225.0" mnemonicParsing="false" onAction="#delUser" prefHeight="50.0" prefWidth="72.0" text="Delete">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cbId" layoutX="74.0" layoutY="31.0" onAction="#fillTF" prefWidth="150.0" promptText="Player ID" />
+    </children>
+</AnchorPane>

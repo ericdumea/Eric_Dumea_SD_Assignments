@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="302.0" prefWidth="248.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.TourOps">
+   <children>
+      <ComboBox fx:id="cbId" layoutX="47.0" layoutY="41.0" onAction="#cbAction" prefWidth="150.0" promptText="Tournament Name" />
+      <Button fx:id="updBtn" layoutX="37.0" layoutY="200.0" mnemonicParsing="false" onAction="#update" prefHeight="54.0" prefWidth="78.0" text="Update" />
+      <Button fx:id="delBtn" layoutX="137.0" layoutY="200.0" mnemonicParsing="false" onAction="#delete" prefHeight="54.0" prefWidth="78.0" text="Delete" />
+      <TextField fx:id="nameTF" layoutX="48.0" layoutY="115.0" promptText="Status" />
+      <TextField fx:id="winTF" layoutX="48.0" layoutY="149.0" promptText="Winner ID" />
+      <TextField fx:id="nameTFF" layoutX="48.0" layoutY="82.0" promptText="Name" />
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</AnchorPane>

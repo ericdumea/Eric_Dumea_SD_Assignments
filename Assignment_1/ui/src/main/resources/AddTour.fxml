@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="405.0" prefWidth="241.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.AddTour">
+   <children>
+      <ComboBox fx:id="cb2" layoutX="43.0" layoutY="50.0" onAction="#refreshcb" prefWidth="150.0" promptText="Player 2" />
+      <ComboBox fx:id="cb3" layoutX="43.0" layoutY="84.0" onAction="#refreshcb" prefWidth="150.0" promptText="Player 3" />
+      <ComboBox fx:id="cb4" layoutX="43.0" layoutY="118.0" onAction="#refreshcb" prefWidth="150.0" promptText="Player 4" />
+      <ComboBox fx:id="cb5" layoutX="43.0" layoutY="153.0" onAction="#refreshcb" prefWidth="150.0" promptText="Player 5" />
+      <ComboBox fx:id="cb6" layoutX="43.0" layoutY="189.0" onAction="#refreshcb" prefWidth="150.0" promptText="Player 6" />
+      <ComboBox fx:id="cb7" layoutX="43.0" layoutY="223.0" onAction="#refreshcb" prefWidth="150.0" promptText="Player 7" />
+      <ComboBox fx:id="cb8" layoutX="43.0" layoutY="257.0" onAction="#refreshcb" prefWidth="150.0" promptText="Player 8" />
+      <ComboBox fx:id="cb1" layoutX="43.0" layoutY="14.0" onAction="#refreshcb" prefWidth="150.0" promptText="Player 1" />
+      <Button fx:id="btnAdd" layoutX="43.0" layoutY="302.0" mnemonicParsing="false" onAction="#addMatches" prefHeight="70.0" prefWidth="150.0" text="Add Tournament">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</AnchorPane>

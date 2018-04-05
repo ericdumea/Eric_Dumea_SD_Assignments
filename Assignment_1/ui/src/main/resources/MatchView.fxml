@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane onMouseClicked="#buildTable" prefHeight="237.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.MatchView">
+   <children>
+      <TableView fx:id="table" layoutX="10.0" layoutY="14.0" prefHeight="200.0" prefWidth="500.0" >
+         <columns>
+            <TableColumn text="ID" fx:id="idColumn">
+                <cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player One" fx:id = "p1Column">
+                <cellValueFactory><PropertyValueFactory property="p1name"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Player Two" fx:id = "p2Column">
+                <cellValueFactory><PropertyValueFactory property="p2name"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="P1" fx:id = "p1Score">
+                <cellValueFactory><PropertyValueFactory property="p1Score"/></cellValueFactory>
+             </TableColumn>
+             <TableColumn text="P2" fx:id = "p2Score">
+                 <cellValueFactory><PropertyValueFactory property="p2Score"/></cellValueFactory>
+             </TableColumn>
+             <TableColumn text="Tournament" fx:id = "tourColumn">
+                 <cellValueFactory><PropertyValueFactory property="tourname"/></cellValueFactory>
+             </TableColumn>
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
