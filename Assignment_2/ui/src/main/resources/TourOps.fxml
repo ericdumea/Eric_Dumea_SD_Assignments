@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="410.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.TourOps">
+   <children>
+      <ComboBox fx:id="cbId" layoutX="47.0" layoutY="41.0" onAction="#cbAction" prefWidth="150.0" promptText="Tournament Name" />
+      <Button fx:id="updBtn" layoutX="47.0" layoutY="294.0" mnemonicParsing="false" onAction="#update" prefHeight="54.0" prefWidth="71.0" text="Update" />
+      <Button fx:id="delBtn" layoutX="126.0" layoutY="294.0" mnemonicParsing="false" onAction="#delete" prefHeight="54.0" prefWidth="71.0" text="Delete" />
+      <TextField fx:id="tf_fee" layoutX="48.0" layoutY="115.0" promptText="Fee" />
+      <TextField fx:id="winTF" layoutX="48.0" layoutY="149.0" promptText="Winner ID" />
+      <TextField fx:id="nameTFF" layoutX="48.0" layoutY="82.0" promptText="Name" />
+      <ComboBox fx:id="cb_type" layoutX="48.0" layoutY="185.0" prefHeight="25.0" prefWidth="149.0" promptText="Type" />
+      <ComboBox fx:id="cb_status" layoutX="48.0" layoutY="223.0" prefHeight="25.0" prefWidth="149.0" promptText="Status" />
+      <TextField fx:id="date_pick" layoutX="48.0" layoutY="257.0" prefHeight="25.0" prefWidth="149.0" promptText="Select Date" />
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</AnchorPane>

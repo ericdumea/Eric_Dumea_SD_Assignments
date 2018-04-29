@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="609.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.AdminView">
+    <children>
+        <Button fx:id="updateBtn" layoutX="68.0" layoutY="30.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="235.0" text="Update Score">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Button>
+        <Button fx:id="matchBtn" layoutX="70.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewMatch" prefHeight="58.0" prefWidth="235.0" text="Matches">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Button>
+        <Button fx:id="tourBtn" layoutX="70.0" layoutY="171.0" mnemonicParsing="false" onAction="#viewTour" prefHeight="58.0" prefWidth="235.0" text="Tournaments">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Button>
+        <Button fx:id="addPlayer" layoutX="58.0" layoutY="248.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="58.0" prefWidth="127.0" text="Add Player">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+      <Button fx:id="updatePlayer" layoutX="188.0" layoutY="248.0" mnemonicParsing="false" onAction="#updatePlayer" prefHeight="58.0" prefWidth="127.0" text="Update Player" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateTour" layoutX="70.0" layoutY="321.0" mnemonicParsing="false" onAction="#updateTournament" prefHeight="58.0" prefWidth="235.0" text="Manage Tournaments" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="addTour" layoutX="68.0" layoutY="481.0" mnemonicParsing="false" onAction="#addTournament" prefHeight="58.0" prefWidth="235.0" text="Add Tournament" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tourNameTF" layoutX="70.0" layoutY="409.0" prefHeight="25.0" prefWidth="235.0" promptText="New Tournament Name" />
+      <ComboBox fx:id="cb_type" layoutX="70.0" layoutY="445.0" prefHeight="25.0" prefWidth="235.0" promptText="Tournament Type" />
+    </children>
+    <padding>
+        <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+    </padding>
+</AnchorPane>

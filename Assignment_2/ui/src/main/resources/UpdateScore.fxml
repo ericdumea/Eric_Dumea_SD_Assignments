@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="393.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.UpdateScoreView">
+   <children>
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="69.0" layoutX="37.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="69.0" layoutX="37.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="69.0" layoutX="167.0" layoutY="114.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="69.0" layoutX="287.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="69.0" layoutX="531.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="69.0" layoutX="531.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="69.0" layoutX="405.0" layoutY="114.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+       <Line endX="69.0" startX="-7.0" translateX="149.0" translateY="77.0" />
+       <Line endX="69.0" layoutX="10.0" layoutY="10.0" startX="-7.0" translateX="138.0" translateY="223.0" />
+       <Line endX="69.0" layoutX="20.0" layoutY="20.0" startX="-7.0" translateX="444.0" translateY="213.0" />
+       <Line endX="69.0" layoutX="30.0" layoutY="30.0" startX="-7.0" translateX="433.0" translateY="43.0" />
+       <Line endX="127.0" layoutX="10.0" layoutY="10.0" startX="-7.0" translateX="269.0" translateY="138.0" />
+       <Line endX="29.0" layoutX="40.0" layoutY="40.0" rotate="270.0" startX="-7.0" translateX="169.0" translateY="55.0" />
+       <Line endX="40.0" layoutX="50.0" layoutY="50.0" rotate="90.0" startX="-7.0" translateX="151.0" translateY="158.0" />
+       <Line endX="40.0" layoutX="60.0" layoutY="60.0" rotate="90.0" startX="-7.0" translateX="262.0" translateY="113.0" />
+       <Line endX="30.0" layoutX="60.0" layoutY="60.0" rotate="90.0" startX="-7.0" translateX="385.0" translateY="33.0" />
+       <Line endX="40.0" layoutX="60.0" layoutY="60.0" rotate="90.0" startX="-7.0" translateX="381.0" translateY="149.0" />
+       <ComboBox id="tourCb" fx:id="cbTour" layoutX="264.0" layoutY="33.0" onAction="#chooseTour" prefWidth="150.0" promptText="Choose Tournament" />
+       <Label fx:id="label11" layoutX="58.0" layoutY="58.0" text="p11" />
+       <Label fx:id="label12" layoutX="58.0" layoutY="85.0" text="p12" />
+       <Label fx:id="label14" layoutX="58.0" layoutY="237.0" text="p12" />
+       <Label fx:id="label13" layoutX="58.0" layoutY="210.0" text="p11" />
+       <Label fx:id="label21" layoutX="186.0" layoutY="126.0" text="p11" />
+       <Label fx:id="label22" layoutX="186.0" layoutY="153.0" text="p12" />
+       <Label fx:id="label32" layoutX="304.0" layoutY="237.0" text="p12" />
+       <Label fx:id="label31" layoutX="304.0" layoutY="210.0" text="p11" />
+       <Label fx:id="label24" layoutX="420.0" layoutY="154.0" text="p12" />
+       <Label fx:id="label23" layoutX="420.0" layoutY="127.0" text="p11" />
+       <Label fx:id="label16" layoutX="544.0" layoutY="85.0" text="p12" />
+       <Label fx:id="label15" layoutX="544.0" layoutY="58.0" text="p11" />
+       <Label fx:id="label18" layoutX="544.0" layoutY="239.0" text="p12" />
+       <Label fx:id="label17" layoutX="544.0" layoutY="212.0" text="p11" />
+
+      <GridPane gridLinesVisible="true" layoutX="37.0" layoutY="282.0" prefHeight="79.0" prefWidth="421.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Label" />
+            <Label text="Label" GridPane.rowIndex="1" />
+            <Label text="Label" GridPane.columnIndex="1" />
+            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Label" GridPane.columnIndex="2" />
+            <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Label" GridPane.columnIndex="3" />
+            <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Label" GridPane.columnIndex="4" />
+            <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label text="Label" GridPane.columnIndex="5" />
+            <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="btn2" layoutX="468.0" layoutY="309.0" mnemonicParsing="false" onAction="#updateScorep2" text="Button" />
+   </children>
+</AnchorPane>

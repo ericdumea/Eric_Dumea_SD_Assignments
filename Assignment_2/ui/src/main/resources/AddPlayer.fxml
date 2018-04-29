@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="286.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.AddPlayer">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <TextField fx:id="emailTF" layoutX="77.0" layoutY="44.0" promptText="Email" />
+      <TextField fx:id="nameTF" layoutX="77.0" layoutY="159.0" promptText="Name" />
+      <Button fx:id="btn" layoutX="77.0" layoutY="196.0" mnemonicParsing="false" onAction="#addUser" prefHeight="50.0" prefWidth="149.0" text="Add User">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passTF" layoutX="77.0" layoutY="84.0" promptText="Password" />
+      <PasswordField fx:id="confirmTF" layoutX="77.0" layoutY="123.0" promptText="Confirm Password" />
+   </children>
+</AnchorPane>

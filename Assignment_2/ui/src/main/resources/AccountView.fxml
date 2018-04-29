@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="249.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.AccountView">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <Label layoutX="35.0" layoutY="32.0" prefHeight="17.0" prefWidth="341.0" text="Account Management">
+         <font>
+            <Font name="BlissPro-Light" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_money" layoutX="167.0" layoutY="87.0" prefHeight="21.0" prefWidth="118.0" text="Balance:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_withdraw" layoutX="234.0" layoutY="170.0" mnemonicParsing="false" onAction="#withdraw" text="Withdraw" />
+      <Button fx:id="btn_add" layoutX="152.0" layoutY="170.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="67.0" text="Add" />
+      <TextField fx:id="tf_money" layoutX="152.0" layoutY="125.0" />
+   </children>
+</AnchorPane>

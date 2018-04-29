@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="466.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.PlayerView">
+   <children>
+      <Button fx:id="updateBtn" layoutX="68.0" layoutY="30.0" mnemonicParsing="false" onAction="#updateScore" prefHeight="58.0" prefWidth="235.0" text="Update Score">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="matchBtn" layoutX="70.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewMatch" prefHeight="58.0" prefWidth="235.0" text="Matches">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="tourBtn" layoutX="70.0" layoutY="188.0" mnemonicParsing="false" onAction="#viewTour" prefHeight="58.0" prefWidth="235.0" text="Tournaments">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_enroll" layoutX="70.0" layoutY="270.0" mnemonicParsing="false" onAction="#enroll" prefHeight="58.0" prefWidth="235.0" text="Enroll">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Label layoutX="52.0" layoutY="255.0" rotate="-33.7" text="NEW!">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_account" layoutX="68.0" layoutY="348.0" mnemonicParsing="false" onAction="#accountManage" prefHeight="58.0" prefWidth="235.0" text="My account">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Label fx:id="label_main" layoutX="48.0" layoutY="437.0" prefHeight="17.0" prefWidth="246.0" text=" " />
+   </children>
+   <padding>
+      <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+   </padding>
+</AnchorPane>

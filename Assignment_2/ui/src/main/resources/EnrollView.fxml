@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="196.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.EnrollView">
+   <children>
+      <Label layoutX="155.0" layoutY="14.0" text="Enroll">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cb" layoutX="119.0" layoutY="60.0" onAction="#updateCb" prefWidth="150.0" />
+      <Label fx:id="label_tour" layoutX="24.0" layoutY="99.0" prefHeight="17.0" prefWidth="332.0" text="Label" />
+      <Button fx:id="enroll_btn" layoutX="128.0" layoutY="128.0" mnemonicParsing="false" onAction="#enroll" prefHeight="46.0" prefWidth="132.0" text="Enroll">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
