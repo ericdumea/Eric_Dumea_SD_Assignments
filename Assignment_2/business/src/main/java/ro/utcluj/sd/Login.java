@@ -12,7 +12,6 @@ public class Login {
     private DaoFactory.Type daoType;
 
     public Login(DaoFactory.Type dao) {
-        System.out.println("Dao mue: "+dao);
         daoType = dao;
         p = DaoFactory.getInstance(daoType).getPlayerDao();
     }

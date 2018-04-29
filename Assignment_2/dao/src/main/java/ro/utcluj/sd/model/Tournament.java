@@ -110,7 +110,6 @@ public class Tournament {
 
     public void setEnrolledPlayers(List<Player> players) {
         this.enrolledPlayers = players;
-        System.out.println("MUEMUEMUEMUE" + players.toString());
     }
 
     public int getId() {

@@ -7,6 +7,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import ro.utcluj.sd.dal.impl.Dao;
 import ro.utcluj.sd.dal.impl.DaoFactory;
+import ro.utcluj.sd.dal.impl.GameDao;
+import ro.utcluj.sd.dal.impl.hibernate.HibernateGameDAO;
+
+import java.io.*;
+import java.nio.Buffer;
+import java.util.Scanner;
 
 /**
  * Hello world!
@@ -36,9 +42,12 @@ public class App extends Application
 
             return;
         }
-        DAO_TYPE = DaoFactory.Type.HIBERNATE;
+
+
+
+        //DAO_TYPE = DaoFactory.Type.HIBERNATE;
         LoginView l = fxmlLoader.getController();
-        l.DAO_TYPE = DaoFactory.Type.HIBERNATE;
+        l.DAO_TYPE = DAO_TYPE;
         primaryStage.setTitle("Ping-Pong Tournament");
         primaryStage.setScene(new Scene(root));
 
@@ -49,7 +58,29 @@ public class App extends Application
 
     }
 
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws IOException {
+
+        String line;
+        BufferedReader bf = null;
+        try {
+            bf = new BufferedReader(new FileReader(App.class.getResource("/config.txt").getFile()));
+
+            while((line = bf.readLine()) != null){
+                if(line.contains("HIBERNATE")){
+                    DAO_TYPE = DaoFactory.Type.HIBERNATE;
+                } else if(line.contains("JDBC")){
+                    DAO_TYPE = DaoFactory.Type.JDBC;
+                } else
+                    throw new Exception();
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally{
+           bf.close();
+        }
         launch(args);
         //System.out.println( "Hello World!" );
     }
