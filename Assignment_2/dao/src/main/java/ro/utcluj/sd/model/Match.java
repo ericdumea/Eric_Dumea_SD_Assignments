@@ -5,6 +5,7 @@ import ro.utcluj.sd.dal.impl.jdbc.GameDAO;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 @Entity
@@ -71,6 +72,33 @@ public class Match {
         this.p2Score = p2Score;
         this.tourPlace = tourPlace;
         this.games = new ArrayList<Game>();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Match match = (Match) o;
+        return id == match.id &&
+                playerOneID == match.playerOneID &&
+                playerTwoID == match.playerTwoID &&
+                tournamentId == match.tournamentId &&
+                p1Score == match.p1Score &&
+                p2Score == match.p2Score &&
+                tourPlace == match.tourPlace &&
+                Objects.equals(player1, match.player1) &&
+                Objects.equals(player2, match.player2) &&
+                Objects.equals(tournament, match.tournament) &&
+                Objects.equals(games, match.games) &&
+                Objects.equals(p1name, match.p1name) &&
+                Objects.equals(p2name, match.p2name) &&
+                Objects.equals(tourname, match.tourname);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, player1, playerOneID, player2, playerTwoID, tournament, tournamentId, p1Score, p2Score, tourPlace, games, p1name, p2name, tourname);
     }
 
     @Transient

@@ -77,6 +77,11 @@ public class TourService {
 
     }
 
+    public Tournament getTournamentByName(String name){
+        TournamentDao tournamentDAO = DaoFactory.getInstance(daoType).getTourDao();
+        return tournamentDAO.findByName(name);
+    }
+
     public ArrayList<String> populateCb(String mail) {
         ArrayList<String> toReturn = new ArrayList<String>();
         ArrayList<Tournament> tournaments;

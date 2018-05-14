@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.client.presentation.ArticleView">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label fx:id="label_title" layoutX="50.0" layoutY="50.0" text="SD NEWS LOL">
+         <font>
+            <Font name="GothamNarrow-Book" size="21.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="article_content" editable="false" layoutX="48.0" layoutY="198.0" prefHeight="394.0" prefWidth="502.0" promptText="Article Text, you shouldn't see this, if you see this, the dev is a utter complete asshole" wrapText="true" />
+      <TextArea fx:id="abstract_content" editable="false" layoutX="44.0" layoutY="110.0" prefHeight="64.0" prefWidth="508.0" wrapText="true" />
+      <ListView fx:id ="related_lv" onMouseClicked="#onClick" layoutX="572.0" layoutY="289.0" prefHeight="300.0" prefWidth="200.0" />
+      <ImageView fx:id = "image" fitHeight="150.0" fitWidth="200.0" layoutX="580.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

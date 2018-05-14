@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import ro.utcluj.sd.dal.impl.TournamentDao;
 import ro.utcluj.sd.model.Match;
 import ro.utcluj.sd.model.Tournament;
 
@@ -16,7 +17,7 @@ import java.util.ResourceBundle;
 public class UpdateScoreView {
 
     private String mail;
-    private GameCore gc = new GameCore();
+    private GameCore gc;
 
     @FXML public ComboBox cbTour;
     @FXML public Label label11;
@@ -36,7 +37,7 @@ public class UpdateScoreView {
 
     private TourService tourService;
 
-    public void chooseTour(){
+    public void chooseTour() throws Exception {
 
         String choice = (String) cbTour.getValue();
         label11.setText("");
@@ -58,7 +59,7 @@ public class UpdateScoreView {
         ArrayList<String> qfinals = new ArrayList<String>();
         ArrayList<String> sfinals = new ArrayList<String>();
 
-
+        gc = new GameCore(this.mail,App.DAO_TYPE,tourService.getTournamentByName((String)cbTour.getValue()));
         allMatches = tourService.getTour(choice);
         System.out.println(allMatches.toString());
 
@@ -112,7 +113,7 @@ public class UpdateScoreView {
         System.out.println("hatZ"+mail);
 
         tourService = new TourService(App.DAO_TYPE);
-        ArrayList<String> x = tourService.populateCb(mail);
+        ArrayList<String> x = tourService.populateCbByStatus(Tournament.IN_PROGRESS);
         label11.setText("");
         label12.setText("");
         label13.setText("");
@@ -128,6 +129,8 @@ public class UpdateScoreView {
         label31.setText("");
         label32.setText("");
 
+
+
         cbTour.getItems().addAll(x);
 
 
@@ -136,5 +139,8 @@ public class UpdateScoreView {
 
 
     public void updateScorep2(ActionEvent actionEvent) {
+
+        gc.updateScore();
+
     }
 }

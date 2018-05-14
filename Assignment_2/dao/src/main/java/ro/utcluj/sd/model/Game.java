@@ -1,6 +1,7 @@
 package ro.utcluj.sd.model;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "game")
@@ -15,21 +16,13 @@ public class Game {
 
     @Column(name = "score2")
     private int score2;
-
     @ManyToOne
+
     @JoinColumn(name = "game_matchID")
     private Match match;
 
     @Transient
     private int matchID;
-
-    public Match getMatch() {
-        return match;
-    }
-
-    public void setMatch(Match match) {
-        this.match = match;
-    }
 
     public Game() {
     }
@@ -47,7 +40,32 @@ public class Game {
         this.matchID = matchID;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Game game = (Game) o;
+        return gameID == game.gameID &&
+                score1 == game.score1 &&
+                score2 == game.score2 &&
+                matchID == game.matchID &&
+                Objects.equals(match, game.match);
+    }
 
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(gameID, score1, score2, match, matchID);
+    }
+
+    public Match getMatch() {
+        return match;
+    }
+
+    public void setMatch(Match match) {
+        this.matchID = match.getId();
+        this.match = match;
+    }
 
     public int getGameID() {
         return gameID;

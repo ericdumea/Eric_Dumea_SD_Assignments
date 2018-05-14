@@ -7,6 +7,7 @@ import java.util.ArrayList;
 //import java.util.Date;
 import java.util.List;
 import java.sql.Date;
+import java.util.Objects;
 
 @Entity
 @Table(name = "tournament")
@@ -69,7 +70,29 @@ public class Tournament {
         matches = new ArrayList<Match>();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tournament that = (Tournament) o;
+        return id == that.id &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(status, that.status) &&
+                Objects.equals(winnerID, that.winnerID) &&
+                Objects.equals(fee, that.fee) &&
+                Objects.equals(type, that.type) &&
+                Objects.equals(date, that.date) &&
+                Objects.equals(matches, that.matches);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, name, status, winnerID, fee, type, date, matches);
+    }
+
     public Tournament() {
+
     }
 
     public Tournament(int id, String name, String status, int winnerID) {

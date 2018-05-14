@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.utcluj.sd.client.presentation.WriterView">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <TextArea fx:id="article_content" layoutX="50.0" layoutY="237.0" prefHeight="311.0" prefWidth="502.0" promptText="Article Text" wrapText="true" />
+        <TextArea fx:id="abstract_content" layoutX="50.0" layoutY="149.0" prefHeight="64.0" prefWidth="502.0" promptText="Abstract" wrapText="true" />
+      <TextField fx:id="title_tf" layoutX="50.0" layoutY="96.0" prefHeight="25.0" prefWidth="502.0" promptText="Article Title" />
+      <ListView fx:id="related_lv" layoutX="576.0" layoutY="348.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="img_btn" layoutX="50.0" layoutY="566.0" mnemonicParsing="false" onMouseClicked="#insert_img" text="Insert image" />
+      <Button fx:id="add_btn" layoutX="598.0" layoutY="195.0" mnemonicParsing="false" onMouseClicked="#addArticle" prefHeight="36.0" prefWidth="150.0" text="Add Article" />
+      <ComboBox fx:id="articleCb" layoutX="48.0" layoutY="45.0" onAction="#updateFields" prefHeight="25.0" prefWidth="507.0" />
+      <Button fx:id="update_btn" layoutX="596.0" layoutY="91.0" mnemonicParsing="false" onAction="#updateArticle" prefHeight="36.0" prefWidth="150.0" text="Update" />
+      <Button fx:id="delete_btn" layoutX="597.0" layoutY="143.0" mnemonicParsing="false" onAction="#deleteArticle" prefHeight="36.0" prefWidth="150.0" text="Delete" />
+    </children>
+</AnchorPane>

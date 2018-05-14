@@ -1,4 +1,4 @@
-package ro.utcluj.sd;
+package ro.utcluj.sd.mains;
 
 import ro.utcluj.sd.dal.impl.DaoFactory;
 import ro.utcluj.sd.dal.impl.MatchDao;
